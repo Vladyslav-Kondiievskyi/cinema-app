@@ -76,7 +76,16 @@ In this project used the n-tier architecture
  ## :gear:  How to launch
  
  - click on the [link](http://cinemaapp.eba-2di7gr42.eu-north-1.elasticbeanstalk.com/login)
- 
+ ####  __USER roles:__
+   
+   - username - user2022@gmail.com
+   - password - user2022
+    
+ ####  __ADMIN roles:__
+   
+   - username - admin2022@i.ua
+   - password - admin2022
+    
  ## :rocket: Future
  
  - upgrade from Spring to Spring Boot
