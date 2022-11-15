@@ -1,7 +1,7 @@
 # :cinema: Cinema :cinema:
 
 ## :key:  About
-This application represent a cinema ticket selling service. The application is intended for use by cinema halls admins and their user.
+Cinema is a simple API implemented with Hibernate and Spring that allows you to register, select a movie session or book a ticket, view attendance history if you are a user, an administrator can create a movie session and more.
 
 ## :mag:  Details
 
