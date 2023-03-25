@@ -9,14 +9,12 @@ import cinema.service.mapper.ResponseDtoMapper;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/movies")
+@CrossOrigin(origins = {"*"})
 public class MovieController {
     private final MovieService movieService;
     private final RequestDtoMapper<MovieRequestDto, Movie> movieRequestDtoMapper;
