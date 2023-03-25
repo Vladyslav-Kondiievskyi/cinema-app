@@ -1,7 +1,9 @@
 package cinema.config;
 
+import cinema.model.Movie;
 import cinema.model.Role;
 import cinema.model.User;
+import cinema.service.MovieService;
 import cinema.service.RoleService;
 import cinema.service.UserService;
 import java.util.Set;
@@ -12,11 +14,14 @@ import org.springframework.stereotype.Component;
 public class DataInitializer {
     private final RoleService roleService;
     private final UserService userService;
+    private final MovieService movieService;
+
 
     public DataInitializer(RoleService roleService,
-                           UserService userService) {
+                           UserService userService, MovieService movieService) {
         this.roleService = roleService;
         this.userService = userService;
+        this.movieService = movieService;
     }
 
     @PostConstruct
@@ -37,5 +42,9 @@ public class DataInitializer {
         user.setRoles(Set.of(userRole));
         userService.add(admin);
         userService.add(user);
+        Movie movie = new Movie();
+        movie.setDescription("About robots");
+        movie.setTitle("Terminator");
+        movieService.add(movie);
     }
 }
